@@ -1,4 +1,5 @@
 import React from "react";
+import TodoList from "./components/TodoList";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
               Skills
             </a>
             <a href="#blog" className="mr-5 hover:text-blue-400 duration-300">
-              Blog
+              Todo
             </a>
             <a href="#contact" className="hover:text-blue-400 duration-300">
               Contact
@@ -262,6 +263,20 @@ const App = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/*Todo*/}
+      <section id="blog" className="text-gray-700 border-t border-gray-200">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="text-center mb-20">
+            <h1 className="sm:text-3xl text-2xl font-medium text-gray-900 mb-4">
+              Todo List
+            </h1>
+            <p className="pb-10">Manage your daily tasks and stay organized.</p>
+          </div>
+          <div className="flex justify-center">
+            <TodoList />
           </div>
         </div>
       </section>
