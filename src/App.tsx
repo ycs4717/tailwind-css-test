@@ -1,6 +1,7 @@
 import React from "react";
 import TodoList from "./components/TodoList";
-
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import { Link } from "react-scroll";
 const App = () => {
   return (
     <>
@@ -10,21 +11,46 @@ const App = () => {
             <span className="ml-3 text-xl">Geundori</span>
           </a>
           <nav className="md:ml-auto text-base">
-            <a href="#home" className="mr-5 hover:text-blue-400 duration-300">
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer mr-5 hover:text-blue-400 duration-300"
+            >
               Home
-            </a>
-            <a href="#about" className="mr-5 hover:text-blue-400 duration-300">
+            </Link>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer mr-5 hover:text-blue-400 duration-300"
+            >
               About
-            </a>
-            <a href="#skill" className="mr-5 hover:text-blue-400 duration-300">
+            </Link>
+            <Link
+              to="skill"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer mr-5 hover:text-blue-400 duration-300"
+            >
               Skills
-            </a>
-            <a href="#blog" className="mr-5 hover:text-blue-400 duration-300">
+            </Link>
+            <Link
+              to="blog"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer mr-5 hover:text-blue-400 duration-300"
+            >
               Todo
-            </a>
-            <a href="#contact" className="hover:text-blue-400 duration-300">
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-blue-400 duration-300"
+            >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -275,11 +301,13 @@ const App = () => {
             </h1>
             <p className="pb-10">Manage your daily tasks and stay organized.</p>
           </div>
+
           <div className="flex justify-center">
             <TodoList />
           </div>
         </div>
       </section>
+      <ScrollToTopButton />
     </>
   );
 };
