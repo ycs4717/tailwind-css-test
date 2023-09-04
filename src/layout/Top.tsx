@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
-const Header = () => {
+
+const Top = () => {
   return (
-    <header className="text-gray-700 border-b border-gray-200">
+    <header className="text-gray-700 border-b border-gray-200 fixed top-0 w-full bg-gray-300">
       <div className="container flex mx-auto  p-5 flex-col md:flex-row  items-center">
         <a href="#" className="font-medium text-gray-900 mb-4 md:mb-0">
           <span className="ml-3 text-xl">Geundori</span>
@@ -54,4 +55,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Top;
